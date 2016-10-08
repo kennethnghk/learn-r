@@ -9,8 +9,8 @@ pollutantmean <- function(directory, pollutant, id=1:332) {
         naValues <- is.na(pollutantColData)
         pollutantColData <- pollutantColData[!naValues]
         fileMean <- mean(pollutantColData)
-        allMeans <- c(allMeans, fileMean)
+        allMeans <- append(allMeans, fileMean)
     }
     
-    allMeans
+    mean(allMeans)
 }
