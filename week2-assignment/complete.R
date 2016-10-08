@@ -1,7 +1,7 @@
 complete <- function(directory, id=1:332) {
     
-    ids = c()
-    nobs = c()
+    ids <- c()
+    nobs <- c()
     
     for (i in id) {
         fileName <- file.path(directory, paste(sprintf("%.3d", i), '.csv', sep=''))
