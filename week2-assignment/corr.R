@@ -1,4 +1,4 @@
-corr <- function(directory, threshold) {
+corr <- function(directory, threshold = 0) {
     subsetData <- subset(completeData, nobs > threshold)
     
     corValues <- c()
