@@ -6,7 +6,7 @@ rpois() ## Possion distrubution
 ## d density 
 ## r random number generation
 ## p cumulative distribution
-## q quantile function
+## q quantile (inverse cumulative distribution) function
 
 dnorm(x, mean = 0, sd = 1, log = FALSE)
 x <- rnorm(10, 20, 2)
