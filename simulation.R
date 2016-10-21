@@ -8,7 +8,7 @@ rpois() ## Possion distrubution
 ## p cumulative distribution
 ## q quantile (inverse cumulative distribution) function
 
-dnorm(x, mean = 0, sd = 1, log = FALSE)
+rnorm(x, mean = 0, sd = 1, log = FALSE)
 x <- rnorm(10, 20, 2)
 
 set.seed(1) ## set the sequence of random number generator
@@ -25,3 +25,17 @@ plot(x,y)
 x <- rbinom(100, 1, 0.5)
 
 sample(1:10, 4) ## randomly get 4 numbers from 1:10
+
+## take 100 samples from 0 and 1, with probability 0.3 and 0.7 respectively
+flips <- sample(c(0,1), 100, replace = TRUE, prob = c(0.3,0.7))
+
+## equivalent to above
+flips2 <- rbinom(100, size=1, prob = 0.7)
+binom(1, size=100, prob = 0.7)
+
+## generate 100 groups of numbers
+## each group has 5 random numbers from poisson distribution with mean = 10
+my_pois <- replicate(100, rpois(5, 10)) ## result is matrix
+
+## plot histogram
+hist(cm)
